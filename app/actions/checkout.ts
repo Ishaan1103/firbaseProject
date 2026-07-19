@@ -51,7 +51,7 @@ export async function startCheckout(
 
   try {
     const checkout = await stripe.checkout.sessions.create({
-      ui_mode: "embedded",
+      ui_mode: "embedded_page",
       redirect_on_completion: "never",
       mode: "payment",
       line_items: [
